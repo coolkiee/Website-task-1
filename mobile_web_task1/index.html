@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .banner{
+            display: flex;
+            justify-content: space-between;
+            background-color: pink;
+            align-items: center;
+            padding: 0 15px;
+            height: 80px;
+        }
+        .bnrdiv{
+            background-image: url(banner.jpg);
+            height: 400px; 
+            position: relative;
+        }
+        .bnr{
+            text-align: center;
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            bottom: 0px;
+            right: 20px;
+        }
+        .headerlink{
+            margin-right: 10px;
+            text-decoration: none;
+            color: black;
+        }
+        .imgmaindiv{
+            display: flex;
+            justify-content: center;
+
+        }
+        .efso_Resim{
+            border: 1px solid black;
+            text-align: center;
+            width: 180px;
+            float: left;
+            margin: 20px 10px;
+            border-top-left-radius:20px ;
+            border-top-right-radius:20px ;
+        }
+        .formgeneral{
+            background-color: lightgrey;
+            margin: 150px 0;
+            padding: 20px;
+            margin: 10px 278px;
+
+        }
+        .FormElement{
+            width: 100%;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 8px 0px;
+            box-sizing: border-box;
+            border: 1px solid red;
+        }
+        .btnsubmit{
+            width: 100%;
+            padding: 13px 0px;
+            background-color: lightgreen;
+            border: none;
+            color: white;
+            margin-top: 20px;
+        }
+        .FormElement:focus{
+            background-color: aquamarine;
+        }
+        .FormElement:hover{
+            background-color: red;
+        }
+
+        .footer{
+            background-color: chocolate;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mobileIcon{
+        display: none;
+        }
+
+        @media screen and (max-width:600px) {
+            .formgeneral{
+                width: 100%;
+                box-sizing: border-box;
+                margin-left: 1%;
+            }
+            .efso_Resim{
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            .imgmaindiv{
+                flex-direction: column;
+            }
+            .mobilelinkdisplay{
+                display: none ;
+
+            }
+            .mobileLink{
+                display: flex;
+                flex-direction: column;
+            }
+            .banner{
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+            }
+            .mobileIcon{
+            display: block;
+            }
+            .headerimg{
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="banner" class="banner">
+        <div onclick="toggle()" class="mobileIcon">
+            <img src="icon.jpg" width="50px" height="50px">
+        </div>
+        <div class="headerimg">
+            <img src="1.jpg" width="32px" height="32px">
+        </div>
+        <div id="mobilenav" class="mobilelinkdisplay">
+            <div class="mobileLink">
+                <a class="headerlink" href="#">Home</a>
+                <a class="headerlink" href="#">About</a>
+                <a class="headerlink" href="#">Contact</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="bnrdiv">
+        <div class="bnr">
+        <h3>Efsane banner IMG</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam exercitationem esse assumenda minus soluta doloribus, deleniti itaque dolor optio reprehenderit, corrupti, voluptate cupiditate. Voluptatem quia facilis exercitationem, deserunt commodi vero!</p>
+        </div>
+    </div>
+    <div class="imgmaindiv">
+        <div class="efso_Resim">
+            <img src="1.jpg" style="width: 100%;border-top-left-radius:20px;border-top-right-radius:20px; margin-bottom: 30px;">
+            <h2>Efso Resim</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit adipisci ut eligendi voluptatum enim, aspernatur porro nemo vel iste culpa cupiditate! Dolorem alias nemo vitae eos earum ducimus, cupiditate et.</p>
+        </div>
+        <div class="efso_Resim">
+            <img src="2.jpg" style="width: 100%;border-top-left-radius:20px;border-top-right-radius:20px;">
+            <h2>Efso Resim</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit adipisci ut eligendi voluptatum enim, aspernatur porro nemo vel iste culpa cupiditate! Dolorem alias nemo vitae eos earum ducimus, cupiditate et.</p>
+        </div>
+        <div class="efso_Resim">
+            <img src="3.jpg" style="width: 100%;border-top-left-radius:20px;border-top-right-radius:20px;">
+            <h2>Efso Resim</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit adipisci ut eligendi voluptatum enim, aspernatur porro nemo vel iste culpa cupiditate! Dolorem alias nemo vitae eos earum ducimus, cupiditate et.</p>
+        </div>
+        <div class="efso_Resim">
+            <img src="4.jpg" style="width: 100%;border-top-left-radius:20px;border-top-right-radius:20px;">
+            <h2>Efso Resim</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit adipisci ut eligendi voluptatum enim, aspernatur porro nemo vel iste culpa cupiditate! Dolorem alias nemo vitae eos earum ducimus, cupiditate et.</p>
+        </div>
+    </div>
+    <form class="formgeneral">
+        <label>Ad</label>
+        <input class="FormElement" type="text" name="firstname" placeholder="Adınızı Giriniz:">
+        <label>Soyad</label>
+        <input class="FormElement" type="text" name="firstname" placeholder="Soyadınızı Giriniz:">
+        <label>Ülke</label>
+
+        <select name="country">
+            <option value="tr">Turkey</option>
+            <option value="fr">French</option>
+            <option value="en">England</option>
+        </select>
+        <input class="btnsubmit" type="submit" value="Kaydet">
+    </form>
+    <div class="footer">
+        <h3>Frontend Ve Tüm Hakları Saklıdır.</h3>
+    </div>
+    <script>
+        function toggle() {
+        let x = document.getElementById("mobilenav");
+        let y = document.getElementById("banner");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            y.style.height="auto"
+        } else {
+            x.style.display = "none";
+        }
+        } 
+    </script>
+</body>
+</html>
